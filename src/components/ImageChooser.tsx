@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as Image } from '../assets/image.svg';
 
 type Props = {
-  handleChosenFile: (file: any) => Promise<void>
+  handleChosenFile: (file: File) => Promise<void>
 }
 
 const ImageChooser: React.FC<Props> = (props) => {

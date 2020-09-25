@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { uploadImageFileAndRetrieveUrl } from '../client/storage';
+import { uploadImageFileAndRetrieveUrl } from '../common/storage';
 import ImageChooser from './ImageChooser';
 import Loader from './Loader';
 import UploadResult from './UploadResult';
@@ -20,6 +20,7 @@ function App() {
       setState('success');
     } catch (e) {
       console.error(e);
+      setImageUrl('');
       setState('choosing');
     }
   }
